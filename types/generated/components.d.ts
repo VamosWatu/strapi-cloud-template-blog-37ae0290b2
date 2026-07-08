@@ -1,5 +1,51 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LearnBulletLine extends Struct.ComponentSchema {
+  collectionName: 'components_learn_bullet_lines';
+  info: {
+    displayName: 'bullet-line';
+    icon: 'bulletList';
+  };
+  attributes: {};
+}
+
+export interface LearnFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_learn_faq_items';
+  info: {
+    displayName: 'faq-item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LearnRuleRealWorld extends Struct.ComponentSchema {
+  collectionName: 'components_learn_rule_real_worlds';
+  info: {
+    displayName: 'rule-real-world';
+  };
+  attributes: {
+    foundersSource: Schema.Attribute.Component<'learn.source-link', false>;
+    secSource: Schema.Attribute.Component<'learn.source-link', false>;
+    whatFoundersTalkAbout: Schema.Attribute.Blocks;
+    whatSecSays: Schema.Attribute.Blocks;
+    whatThisMeansForFounders: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LearnSourceLink extends Struct.ComponentSchema {
+  collectionName: 'components_learn_source_links';
+  info: {
+    displayName: 'source-link';
+    icon: 'rocket';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +111,10 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'learn.bullet-line': LearnBulletLine;
+      'learn.faq-item': LearnFaqItem;
+      'learn.rule-real-world': LearnRuleRealWorld;
+      'learn.source-link': LearnSourceLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

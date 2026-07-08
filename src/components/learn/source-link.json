@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_learn_source_links",
+  "info": {
+    "displayName": "source-link",
+    "icon": "rocket"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

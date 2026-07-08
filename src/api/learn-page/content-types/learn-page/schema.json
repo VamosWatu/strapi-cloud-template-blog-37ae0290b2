@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_pages",
+  "info": {
+    "singularName": "learn-page",
+    "pluralName": "learn-pages",
+    "displayName": "Learn Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "what-is"
+      ]
+    },
+    "directAnswer": {
+      "type": "blocks",
+      "required": true
+    },
+    "helpsYouUnderstand": {
+      "type": "component",
+      "component": "learn.bullet-line",
+      "repeatable": true
+    },
+    "ruleAndRealWorld": {
+      "type": "component",
+      "component": "learn.rule-real-world",
+      "repeatable": false
+    },
+    "cairnulsConclusion": {
+      "type": "blocks"
+    },
+    "howCairnulHelps": {
+      "type": "blocks"
+    },
+    "whatFoundersUsuallyMiss": {
+      "type": "blocks"
+    },
+    "actionChecklist": {
+      "type": "component",
+      "component": "learn.bullet-line",
+      "repeatable": true
+    },
+    "relatedWaysAsked": {
+      "type": "component",
+      "component": "learn.bullet-line",
+      "repeatable": true
+    },
+    "faq": {
+      "type": "component",
+      "component": "learn.faq-item",
+      "repeatable": true
+    },
+    "learn_pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learn-page.learn-page",
+      "inversedBy": "relatedPages"
+    },
+    "relatedPages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learn-page.learn-page",
+      "mappedBy": "learn_pages"
+    }
+  }
+}

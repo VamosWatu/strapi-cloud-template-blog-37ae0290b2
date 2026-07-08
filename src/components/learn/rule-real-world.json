@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_learn_rule_real_worlds",
+  "info": {
+    "displayName": "rule-real-world"
+  },
+  "options": {},
+  "attributes": {
+    "whatSecSays": {
+      "type": "blocks"
+    },
+    "secSource": {
+      "type": "component",
+      "component": "learn.source-link",
+      "repeatable": false
+    },
+    "whatThisMeansForFounders": {
+      "type": "blocks"
+    },
+    "whatFoundersTalkAbout": {
+      "type": "blocks"
+    },
+    "foundersSource": {
+      "type": "component",
+      "component": "learn.source-link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

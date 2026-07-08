@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "learn_globals",
+  "info": {
+    "singularName": "learn-global",
+    "pluralName": "learn-globals",
+    "displayName": "Learn Global"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ctaText": {
+      "type": "blocks"
+    },
+    "disclaimer": {
+      "type": "blocks"
+    }
+  }
+}
