@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_learn_snapshot_cards",
+  "info": {
+    "displayName": "snapshot-card",
+    "icon": "cloud"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "highlighter": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

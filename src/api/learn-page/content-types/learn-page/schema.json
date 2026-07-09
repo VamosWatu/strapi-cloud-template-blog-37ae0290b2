@@ -35,6 +35,18 @@
       "component": "learn.bullet-line",
       "repeatable": true
     },
+    "railNote": {
+      "type": "string"
+    },
+    "simpleExplanationHeading": {
+      "type": "string"
+    },
+    "simpleExplanationBody": {
+      "type": "blocks"
+    },
+    "ruleHeading": {
+      "type": "string"
+    },
     "ruleAndRealWorld": {
       "type": "component",
       "component": "learn.rule-real-world",
@@ -43,18 +55,19 @@
     "cairnulsConclusion": {
       "type": "blocks"
     },
+    "cairnulHelpsHeading": {
+      "type": "string"
+    },
     "howCairnulHelps": {
       "type": "blocks"
     },
     "whatFoundersUsuallyMiss": {
       "type": "blocks"
     },
-    "actionChecklist": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+    "checklistHeading": {
+      "type": "string"
     },
-    "relatedWaysAsked": {
+    "actionChecklist": {
       "type": "component",
       "component": "learn.bullet-line",
       "repeatable": true
@@ -64,17 +77,28 @@
       "component": "learn.faq-item",
       "repeatable": true
     },
-    "learn_pages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::learn-page.learn-page",
-      "inversedBy": "relatedPages"
+    "relatedHeading": {
+      "type": "string"
+    },
+    "relatedWaysAsked": {
+      "type": "component",
+      "component": "learn.bullet-line",
+      "repeatable": true
     },
     "relatedPages": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::learn-page.learn-page",
       "mappedBy": "learn_pages"
+    },
+    "learn_pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learn-page.learn-page",
+      "inversedBy": "relatedPages"
+    },
+    "ctaHeading": {
+      "type": "string"
     }
   }
 }

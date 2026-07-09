@@ -505,7 +505,6 @@ export interface ApiLearnGlobalLearnGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaText: Schema.Attribute.Blocks;
     disclaimer: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -532,12 +531,15 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     actionChecklist: Schema.Attribute.Component<'learn.bullet-line', true>;
+    cairnulHelpsHeading: Schema.Attribute.String;
     cairnulsConclusion: Schema.Attribute.Blocks;
     category: Schema.Attribute.Enumeration<['what-is']> &
       Schema.Attribute.Required;
+    checklistHeading: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaHeading: Schema.Attribute.String;
     directAnswer: Schema.Attribute.Blocks & Schema.Attribute.Required;
     faq: Schema.Attribute.Component<'learn.faq-item', true>;
     helpsYouUnderstand: Schema.Attribute.Component<'learn.bullet-line', true>;
@@ -553,6 +555,8 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    railNote: Schema.Attribute.String;
+    relatedHeading: Schema.Attribute.String;
     relatedPages: Schema.Attribute.Relation<
       'manyToMany',
       'api::learn-page.learn-page'
@@ -562,6 +566,9 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
       'learn.rule-real-world',
       false
     >;
+    ruleHeading: Schema.Attribute.String;
+    simpleExplanationBody: Schema.Attribute.Blocks;
+    simpleExplanationHeading: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;

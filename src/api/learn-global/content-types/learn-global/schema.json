@@ -11,9 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ctaText": {
-      "type": "blocks"
-    },
     "disclaimer": {
       "type": "blocks"
     }

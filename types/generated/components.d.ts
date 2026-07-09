@@ -26,11 +26,30 @@ export interface LearnRuleRealWorld extends Struct.ComponentSchema {
     displayName: 'rule-real-world';
   };
   attributes: {
+    foundersBody: Schema.Attribute.Blocks;
+    foundersEyebrow: Schema.Attribute.String;
+    foundersQuoteCaption: Schema.Attribute.String;
     foundersSource: Schema.Attribute.Component<'learn.source-link', false>;
+    foundersSourceName: Schema.Attribute.String;
+    secBody: Schema.Attribute.Blocks;
+    secEyebrow: Schema.Attribute.String;
     secSource: Schema.Attribute.Component<'learn.source-link', false>;
+    secSourceName: Schema.Attribute.String;
     whatFoundersTalkAbout: Schema.Attribute.Blocks;
     whatSecSays: Schema.Attribute.Blocks;
-    whatThisMeansForFounders: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LearnSnapshotCard extends Struct.ComponentSchema {
+  collectionName: 'components_learn_snapshot_cards';
+  info: {
+    displayName: 'snapshot-card';
+    icon: 'cloud';
+  };
+  attributes: {
+    highlighter: Schema.Attribute.String & Schema.Attribute.Required;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -114,6 +133,7 @@ declare module '@strapi/strapi' {
       'learn.bullet-line': LearnBulletLine;
       'learn.faq-item': LearnFaqItem;
       'learn.rule-real-world': LearnRuleRealWorld;
+      'learn.snapshot-card': LearnSnapshotCard;
       'learn.source-link': LearnSourceLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

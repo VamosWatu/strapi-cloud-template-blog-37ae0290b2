@@ -5,6 +5,12 @@
   },
   "options": {},
   "attributes": {
+    "secEyebrow": {
+      "type": "string"
+    },
+    "secSourceName": {
+      "type": "string"
+    },
     "whatSecSays": {
       "type": "blocks"
     },
@@ -13,8 +19,17 @@
       "component": "learn.source-link",
       "repeatable": false
     },
-    "whatThisMeansForFounders": {
+    "secBody": {
       "type": "blocks"
+    },
+    "foundersEyebrow": {
+      "type": "string"
+    },
+    "foundersSourceName": {
+      "type": "string"
+    },
+    "foundersQuoteCaption": {
+      "type": "string"
     },
     "whatFoundersTalkAbout": {
       "type": "blocks"
@@ -23,6 +38,9 @@
       "type": "component",
       "component": "learn.source-link",
       "repeatable": false
+    },
+    "foundersBody": {
+      "type": "blocks"
     }
   },
   "config": {}
