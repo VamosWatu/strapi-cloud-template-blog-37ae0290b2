@@ -270,5 +270,12 @@ async function main() {
 
 
 module.exports = async () => {
+  // Fix from Strapi support: restructuring the bullet-line component left stale
+  // permission records that no longer match current field paths, causing
+  // "no permissions to see this field" for helpsYouUnderstand, actionChecklist,
+  // and relatedWaysAsked even for super admin. Both calls are idempotent.
+  await strapi.service('admin::permission').cleanPermissionsInDatabase();
+  await strapi.service('admin::role').resetSuperAdminPermissions();
+
   await seedExampleApp();
 };
