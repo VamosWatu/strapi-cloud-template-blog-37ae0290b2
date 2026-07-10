@@ -31,9 +31,7 @@
       "required": true
     },
     "helpsYouUnderstand": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+      "type": "blocks"
     },
     "railNote": {
       "type": "string"
@@ -68,9 +66,7 @@
       "type": "string"
     },
     "actionChecklist": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+      "type": "blocks"
     },
     "faq": {
       "type": "component",
@@ -81,9 +77,7 @@
       "type": "string"
     },
     "relatedWaysAsked": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+      "type": "blocks"
     },
     "relatedPages": {
       "type": "relation",
