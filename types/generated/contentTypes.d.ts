@@ -541,7 +541,7 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    actionChecklist: Schema.Attribute.Component<'learn.bullet-line', true>;
+    actionChecklist: Schema.Attribute.Blocks;
     cairnulHelpsHeading: Schema.Attribute.String;
     cairnulsConclusion: Schema.Attribute.Blocks;
     category: Schema.Attribute.Enumeration<['what-is']> &
@@ -553,7 +553,7 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
     ctaHeading: Schema.Attribute.String;
     directAnswer: Schema.Attribute.Blocks & Schema.Attribute.Required;
     faq: Schema.Attribute.Component<'learn.faq-item', true>;
-    helpsYouUnderstand: Schema.Attribute.Component<'learn.bullet-line', true>;
+    helpsYouUnderstand: Schema.Attribute.Blocks;
     howCairnulHelps: Schema.Attribute.Blocks;
     learn_pages: Schema.Attribute.Relation<
       'manyToMany',
@@ -572,7 +572,7 @@ export interface ApiLearnPageLearnPage extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::learn-page.learn-page'
     >;
-    relatedWaysAsked: Schema.Attribute.Component<'learn.bullet-line', true>;
+    relatedWaysAsked: Schema.Attribute.Blocks;
     ruleAndRealWorld: Schema.Attribute.Component<
       'learn.rule-real-world',
       false

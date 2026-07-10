@@ -31,9 +31,7 @@
       "required": true
     },
     "helpsYouUnderstand": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+      "type": "blocks"
     },
     "railNote": {
       "type": "string"
@@ -68,9 +66,7 @@
       "type": "string"
     },
     "actionChecklist": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
+      "type": "blocks"
     },
     "faq": {
       "type": "component",
@@ -79,11 +75,6 @@
     },
     "relatedHeading": {
       "type": "string"
-    },
-    "relatedWaysAsked": {
-      "type": "component",
-      "component": "learn.bullet-line",
-      "repeatable": true
     },
     "relatedPages": {
       "type": "relation",
@@ -96,6 +87,9 @@
       "relation": "manyToMany",
       "target": "api::learn-page.learn-page",
       "inversedBy": "relatedPages"
+    },
+    "relatedWaysAsked": {
+      "type": "blocks"
     },
     "ctaHeading": {
       "type": "string"
